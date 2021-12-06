@@ -75,6 +75,7 @@ body {
 article.opinionCard {
     background-color: hsl(300, 43%, 22%);
     display:flex;
+    flex-direction:column;
     width: 100%;
     height: fit-content;
     margin: 1rem 0.5rem 1rem 0;
