@@ -1,0 +1,140 @@
+*, *:before, *:after {margin:0;padding:0;box-sizing: border-box; font-size: 15px;font-family:'Spartan', sans-serif;}
+
+body {
+    min-height:99vh;
+    max-height: max-content;
+    height: 100vh;
+    max-width:100vw;
+    display:flex;flex-direction:column;
+    margin:0 5rem;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.titleBox {
+    display:grid;
+    max-width:inherit;
+    grid-template-columns:4fr 5fr;
+    align-content:center;
+    justify-items:center;
+    height: 100%;
+}
+
+.titleBox hgroup h5 {
+    font-weight: 400;
+    color:hsl(303, 10%, 53%);
+}
+
+.titleBox hgroup h1 {
+    font-weight: 900;
+    color:hsl(300, 43%, 22%);
+    font-size: 3rem;
+}
+
+#ratingsBlock {
+    place-self:center;
+    display:flex; flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items:center;
+}
+
+#ratingsBlock .rating  {
+    color:hsl(300, 43%, 22%);
+    font-weight: 900;
+    background-color: hsl(300, 24%, 96%);
+    padding: 0.5rem 4rem 0.5rem 2rem;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+}
+
+#ratingsBlock .rating .stars {
+    display:inline-block;
+    margin-right: 0.2rem;
+}
+
+.rating .stars img:last-of-type {
+    margin-right:2rem;
+}
+
+.start {place-self:start;}
+
+.center {place-self:center;}
+
+.end {place-self:end;}
+
+#opinionCards {
+    display:flex;
+    align-content: stretch;
+    align-items:center;
+    width:100%; height:100%;
+   }
+
+
+article.opinionCard {
+    background-color: hsl(300, 43%, 22%);
+    display:flex;
+    width: 100%;
+    height: fit-content;
+    margin: 1rem 0.5rem 1rem 0;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem 1rem 1rem;
+    color: #fff;
+    font-weight: 100;
+}
+
+article.opinionCard img {
+    border-radius:50%;
+    width: 3rem;
+    margin: 1rem 1rem 1rem 0;
+}
+
+article.opinionCard header {
+    display:flex;
+    align-items:center;
+}
+
+article.opinionCard h6 {
+    font-weight: 100;
+    font-size: 0.8rem;
+    color:hsl(333, 80%, 67%);
+}
+
+article.opinionCard p {
+    font-size:0.9rem;
+    line-height: 1.3rem;
+}
+
+footer {
+    position:fixed;
+    bottom:0;
+    left:auto;
+    place-self:center;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+@media screen and (max-width:760px) {
+    .titleBox {
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr 1fr;
+    }
+
+
+    article.opinionCard.start, article.opinionCard.end,article.opinionCard.center {place-self:start center;}
+    article.opinionCard {margin:0 0.5rem 1rem 0;}
+}
+
+@media screen and (max-width:650px) {
+  * {font-size:14px;}
+
+  #opinionCards {
+      flex-direction: column;
+  }
+}
